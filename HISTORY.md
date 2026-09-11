@@ -11,6 +11,20 @@ This is a summary of TheFreeMike's project. It is separate from the
 [DR-89/fear-vr project](https://github.com/DR-89/fear-vr); this repository's
 support covers releases published by TheFreeMike here.
 
+## A human–AI collaboration
+
+TheFreeMike and **Codex, OpenAI's AI coding assistant**, worked together through
+these iterations. Mike directed the experience, made gameplay and comfort
+choices, tested in the headset, and brought back concrete feedback. Codex
+contributed substantial engineering work: implementing and debugging changes,
+reviewing code, running automated checks, developing build and installation
+tooling, and preparing packages and documentation.
+
+That back-and-forth is part of the project's history. AI assistance was central
+to the engineering workflow; the physical testing and final decisions remained
+human. Private-beta testers added further hardware and gameplay feedback.
+See [Credits and AI transparency](README.md#credits-and-ai-transparency).
+
 ## From prototype to a playable campaign
 
 **July 21–30 — Building the VR foundation.** The recorded work developed the

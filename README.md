@@ -103,6 +103,27 @@ before posting; keep personal paths and crash dumps private.
 The mod is free. Donations are optional and do not purchase support, access,
 or a response deadline.
 
+## Credits and AI transparency
+
+**F.E.A.R. VR was built through a collaboration between TheFreeMike and Codex,
+OpenAI's AI coding assistant.** AI was a substantial part of the engineering
+process, and we want to be transparent about that contribution.
+
+- **TheFreeMike (Mike):** project direction, gameplay and comfort decisions,
+  hands-on headset testing, feedback that guided repeated revisions, and
+  community and release stewardship.
+- **Codex (OpenAI):** substantial engineering assistance across code
+  implementation, debugging, code review, automated checks, build and installer
+  tooling, release packaging, and player documentation, working iteratively
+  with Mike's direction and test results.
+- **Private-beta testers:** hardware reports, reproduction steps, and gameplay
+  feedback that helped uncover issues beyond the development setup.
+
+The collaboration combined AI-assisted engineering with human judgment and
+real headset testing. Mike maintains the project and makes the final release
+decisions; AI-generated changes still need review and validation. This is an
+independent community project, not an OpenAI product or endorsement.
+
 ## About this repository
 
 This is the **distribution and documentation repository**. It contains player
