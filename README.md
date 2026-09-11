@@ -1,4 +1,4 @@
-# F.E.A.R. VR
+# F.E.A.R. VR by TheFreeMike
 
 <img src="assets/alma.png" alt="Alma, F.E.A.R. VR artwork" width="240">
 
@@ -11,6 +11,27 @@ and a Windows PC capable of PC VR. The base game is not included.
 
 [Download the latest release](https://github.com/thefreemike31/fear-vr/releases/latest)
 · [Installation](INSTALLATION.md) · [Troubleshooting](TROUBLESHOOTING.md)
+
+## Make sure you have the right mod
+
+This is **TheFreeMike's F.E.A.R. VR**, distributed by **thefreemike31**.
+The separate [DR-89/fear-vr project](https://github.com/DR-89/fear-vr) has its own
+releases and instructions. TheFreeMike does not maintain or provide support
+for that project's builds or other F.E.A.R. VR mods.
+
+For support here, use a release downloaded from
+[thefreemike31/fear-vr](https://github.com/thefreemike31/fear-vr/releases) and
+include its version and download URL in your report. Do not combine installers
+or files from different VR mods.
+
+## From prototype to public release
+
+The public launch follows weeks of development and private-beta testing, with
+retained milestones from July 21 through September 11, 2026: physical reloads
+and holsters, campaign interaction fixes, calibration, configurable controls,
+and a native installer with recovery support.
+
+[Read the development history and beta milestones](https://github.com/thefreemike31/fear-vr/blob/main/HISTORY.md).
 
 ## Start here
 

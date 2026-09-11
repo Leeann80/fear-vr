@@ -1,5 +1,11 @@
 # Troubleshooting F.E.A.R. VR v0.1.0
 
+Support here covers **F.E.A.R. VR by TheFreeMike**, downloaded from
+[thefreemike31/fear-vr](https://github.com/thefreemike31/fear-vr/releases).
+For builds from another author or repository, use that project's support
+channels. Include your mod version and original download URL when reporting a
+problem here, and do not mix files from different VR mods.
+
 [Main guide](README.md) · [Installation](INSTALLATION.md) · [Known limitations](KNOWN-LIMITATIONS.md)
 
 This guide is for the public native-installer package. You can troubleshoot and

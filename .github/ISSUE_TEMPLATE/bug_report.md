@@ -10,6 +10,7 @@ Please read TROUBLESHOOTING.md and search existing issues first. Discord is opti
 Do not post private paths, crash dumps, original game files, or credentials.
 
 **Version and installation**
+- Mod author / original download URL (support here covers TheFreeMike releases):
 - Mod version and ZIP checksum verified:
 - Fresh install or upgrade (previous version):
 - Supported GOG base game works without VR: yes / no / not checked
