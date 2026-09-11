@@ -1,0 +1,29 @@
+# Known limitations
+
+[Main guide](README.md) · [Troubleshooting](TROUBLESHOOTING.md)
+
+- This release targets the supported GOG base-game single-player campaign.
+  Expansions, multiplayer, Steam/retail executable variants, and Linux/Proton
+  are outside its supported scope.
+- Quest 3 with Touch controllers is the physical validation baseline. Other
+  headsets, controller profiles, and wide/canted-headset display adjustments
+  remain experimental. A listed mapping is not a guarantee of hardware coverage.
+- Meta Quest Link and Air Link are unsupported, even through SteamVR.
+- Optional **Flashlight Shadows** is experimental and off by default. Detached
+  hands do not cast those flashlight shadows. Other optional visual/body
+  features may have imperfect alignment or scene-dependent artifacts.
+- The game remains a 32-bit application. High per-eye resolutions can create
+  memory/GPU pressure even on a PC with plentiful system RAM. Start with the
+  supported display defaults and adjust one setting at a time.
+- Capture safeguards improve handling of a delayed GPU, but recurring stalls
+  reported on some systems have not been conclusively diagnosed or universally
+  resolved. Driver calls, runtime waits, loading, and streaming can still stall.
+- A runtime shutdown or lost OpenXR session may require quitting and relaunching
+  the game after restoring the headset connection.
+- Existing save/profile data and native game behavior still matter. Keep save
+  backups and report specific levels/actions for repeatable campaign problems.
+- Releases are unsigned. Local download verification is not a guarantee that
+  every antivirus or reputation service will accept the same archive.
+
+Read the latest release notes and open issues before assuming an old workaround
+still applies. Development tools and the local Level Select menu are not shipped.

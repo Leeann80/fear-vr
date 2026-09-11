@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F.E.A.R. VR Controller Layouts</title>
+<style>
+@media(max-width:760px){tbody td:nth-child(2)::before{content:"Right-handed: ";font-weight:650}tbody td:nth-child(3)::before{content:"Left-handed: ";font-weight:650}}
+:root{color-scheme:dark;--bg:#090b0d;--panel:#11161b;--line:#2b3944;--text:#eef3f6;--muted:#aab7c0;--red:#d94a3f;--cyan:#54c7d9;--green:#72d39d;--amber:#e2b85d}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#17232b 0,#090b0d 42rem);color:var(--text);font:16px/1.48 "Segoe UI",Arial,sans-serif}main{width:min(1180px,calc(100% - 32px));margin:auto;padding:34px 0 72px}.eyebrow,.family{margin:0 0 6px;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--cyan)}h1{font-size:clamp(2rem,5vw,4.4rem);line-height:.98;margin:.15em 0}.lede{max-width:850px;color:var(--muted);font-size:1.08rem}.callout{border-left:4px solid var(--amber);background:#18170f;padding:14px 18px;margin:22px 0;border-radius:0 10px 10px 0}.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:24px 0}.legend div{border:1px solid var(--line);background:rgba(17,22,27,.88);padding:14px;border-radius:10px}.grid{display:grid;gap:18px}.card{border:1px solid var(--line);background:rgba(17,22,27,.96);border-radius:14px;padding:20px;box-shadow:0 18px 38px rgba(0,0,0,.22)}.card-head{display:flex;gap:18px;justify-content:space-between;align-items:flex-start}.card h2{margin:0;font-size:1.45rem}.status{max-width:300px;padding:7px 10px;border-radius:999px;font-size:.76rem;text-align:center}.status.validated{color:#08110c;background:var(--green)}.status.suggested{color:#171105;background:var(--amber)}.notes{color:var(--muted)}table{width:100%;border-collapse:collapse;margin-top:14px}th,td{text-align:left;vertical-align:top;border-top:1px solid var(--line);padding:10px 8px}th{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--cyan)}td:first-child{width:28%;font-weight:650}code{overflow-wrap:anywhere;color:#bddde4}details{margin-top:14px;color:var(--muted)}summary{cursor:pointer;color:var(--text)}footer{margin-top:24px;color:var(--muted);font-size:.9rem}@media(max-width:760px){.card-head{display:block}.status{display:inline-block;margin-top:12px}table,thead,tbody,tr,th,td{display:block}thead{position:absolute;left:-9999px}tr{border-top:1px solid var(--line);padding:8px 0}td{border:0;padding:4px 0}td:first-child{width:auto;color:var(--cyan)}}@media print{body{background:white;color:#111}.card,.legend div{background:white;box-shadow:none;break-inside:avoid}.notes,.lede,details,footer{color:#333}}
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">F.E.A.R. VR v0.1.0 / guide reviewed September 11, 2026</p>
+  <h1>Controller layouts</h1>
+  <p class="lede">These layouts come from the same canonical mapping data used to compile the OpenXR bridge. They describe the default <strong>mapping profile</strong>, which may differ from the controller name printed on the hardware when a runtime emulates another profile.</p>
+  <div class="callout"><strong>Validation key:</strong> Meta / Oculus Touch is physically headset-validated. Every other mapping is specification-checked and compiled into the bridge but still needs feedback from matching hardware. System, Meta, Windows, and SteamVR dashboard buttons remain runtime-owned.</div>
+  <div class="callout"><strong>Pause with SteamVR:</strong> press the two lower face buttons together: <strong>Right A + Left X</strong> on Touch, or <strong>Right A + Left A</strong> on the Index mapping. Press them together rather than holding one first. The profile tables show the equivalent controls for other mappings. The normal mapped Menu button remains available when the runtime exposes it; a system/dashboard button may open the runtime instead.</div>
+  <section class="legend">
+    <div><strong>Trigger</strong><br>Fire. Also selects menu items while pointing.</div>
+    <div><strong>Grip / squeeze</strong><br>Grab props, support weapons, climb, perform reload steps, or squeeze the utility hand at your temple for the flashlight.</div>
+    <div><strong>Standard sticks</strong><br>Left moves. Right turns; vertical right-stick input jumps or crouches.</div>
+    <div><strong>Southpaw option</strong><br>Swaps locomotion and turn axes only. Weapon handedness selects a separate default/personal button layout.</div>
+  </section>
+  <section class="card" aria-labelledby="current-settings">
+    <h2 id="current-settings">Controls and settings</h2>
+    <p><strong>Controls &amp; Layout:</strong> open <strong>Options &gt; VR Settings &gt; Controls &amp; Layout</strong> to select your weapon hand and movement stick, toggle Tap to Walk, and choose whether a weapon-button tap cycles weapons or selects Unarmed. <strong>Button Layout / Remap</strong> shows the runtime-bound inputs and lets you move the six gameplay button roles. Used buttons exchange roles. Layouts are saved separately for each reported controller pair and weapon hand; Restore This Layout restores its defaults. The current controls and menu presentation are owner-accepted. Broader controller coverage awaits community feedback. These settings are included in this release.</p>
+    <p><strong>Walk/Run and Medkit:</strong> start running; tap the mapped utility button to walk, then tap again to run. Hold it for a medkit. Tap to Walk defaults on and can be disabled on Controls &amp; Layout. In Classic Sticky, holding the mapped weapon button opens the weapon selector, regardless of the tap option. In Grip &amp; Holsters, both tap switching and the wheel are disabled. Triggers, Grips, menu navigation, and the pause chord retain their physical functions.</p>
+    <p><strong>Physical actions:</strong> use Grip to grab, support, climb, and perform manual reload steps. In Grip &amp; Holsters mode, reach to your hip, shoulder, or back weapon slot to draw or stow; the utility-hand chest socket holds throwables. Visible Holstered Weapons defaults to Yes; No hides passive body models and belt visuals without changing draw/reload interactions. Calibration references remain visible. Physical Pickups and Physical Weapon Swap are separate options under <strong>Immersion &amp; Interaction</strong>. Either palm can touch eligible doors, buttons, and levers; the mapped Use button is also available.</p>
+    <p><strong>Calibration &amp; Body Fit:</strong> open <strong>Options &gt; VR Settings &gt; Calibration &amp; Body Fit</strong>. From the main menu, calibration opens a dedicated room; during a campaign, it runs in your current level. Adjust height, holsters and pouches, Weapon Grip Calibration, or Advanced Sight Alignment. Body calibration includes a mirror. Grip and sight corrections have separate resets; sight alignment changes the aim ray without moving the weapon. This release includes the required room and material, controller-referenced hand fitting, and clearer calibration-menu text; the developer launcher and Level Select remain excluded.</p>
+    <p><strong>VR Aiming:</strong> Dual Pistol Colors defaults to On (green/amber). Off uses the selected main colour for both pistols in every aim-indicator mode.</p>
+    <p><strong>Headset Display:</strong> Render Resolution ranges from 50-200%, defaults to 125%, and applies on the next launch. Keep <strong>Centered (Recommended)</strong> projection and 100% View Width as the Quest-safe defaults. Headset Native and View Width adjustment remain experimental for other headsets. Restore Display Defaults resets all three values.</p>
+    <p><strong>Guidance and comfort:</strong> Tutorial Cards and Interaction Cards have separate switches under <strong>Guidance Cards</strong>. New Game resets tutorial progress; Continue preserves it. Reload cards require an actionable held weapon. The received-damage indicator is independently optional under <strong>Comfort &amp; Movement &gt; Damage Indicator</strong>. Follow the contextual cards for weapon-specific reloads and physical interactions.</p>
+  </section>
+  <h2>All controller profiles</h2>
+  <section class="grid">
+    <article class="card fallback" data-profile="simple-controller">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / fallback</p>
+      <h2>OpenXR Simple Controller fallback</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; controller hardware not headset-validated</span>
+  </div>
+  <p class="notes">Minimal runtime fallback: aim, trigger/select, haptics, and pause only.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Menu</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/khr/simple_controller</code></div>
+    <div><strong>Profile:</strong> OpenXR core</div>
+  </details>
+</article>
+<article class="card abxy" data-profile="oculus-touch">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>Meta / Oculus Touch</h2>
+    </div>
+    <span class="status validated">Headset-validated on Quest 3 through VirtualDesktopXR</span>
+  </div>
+  <p class="notes">Full mapping. The right system/Meta button remains runtime-owned.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left X</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Y</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left X together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/oculus/touch_controller</code></div>
+    <div><strong>Profile:</strong> OpenXR core</div>
+  </details>
+</article>
+<article class="card index" data-profile="valve-index">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / index</p>
+      <h2>Valve Index controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; Index hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping when XR_EXT_dpad_binding is available; otherwise the dedicated trackpad pause binding is unavailable. The SteamVR face-button pause shortcut is listed below. System buttons remain runtime-owned.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left A</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left B</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Press center of left trackpad</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left A together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/valve/index_controller</code></div>
+    <div><strong>Profile:</strong> OpenXR core</div>
+  </details>
+</article>
+<article class="card wmr-trackpad" data-profile="microsoft-motion-controller">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / wmr-trackpad</p>
+      <h2>Windows Mixed Reality motion controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; WMR hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping when XR_EXT_dpad_binding is available. Thumbsticks remain dedicated to locomotion and turning.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Press top of right trackpad</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Press bottom of right trackpad</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Press top of left trackpad</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Press center of left trackpad</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Press center of right trackpad</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Press bottom of left trackpad</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Press top of right trackpad + Press top of left trackpad together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/microsoft/motion_controller</code></div>
+    <div><strong>Profile:</strong> OpenXR core</div>
+  </details>
+</article>
+<article class="card vive-wand" data-profile="htc-vive-controller">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / vive-wand</p>
+      <h2>HTC Vive wands</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; Vive wand hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping when XR_EXT_dpad_binding is available. Trackpads provide locomotion/turn axes and activate mapped actions only when pressed. System buttons remain runtime-owned.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Trackpad slide</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Press top of right trackpad</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Press bottom of right trackpad</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Press top of left trackpad</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Press center of left trackpad</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Press center of right trackpad</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Press bottom of left trackpad</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Press top of right trackpad + Press top of left trackpad together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/htc/vive_controller</code></div>
+    <div><strong>Profile:</strong> OpenXR core</div>
+  </details>
+</article>
+<article class="card abxy" data-profile="generic-controller">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>OpenXR Generic Controller fallback</h2>
+    </div>
+    <span class="status suggested">Suggested fallback; physical controller depends on runtime emulation</span>
+  </div>
+  <p class="notes">Broad standards-based fallback with all core gameplay actions except pause.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right Primary</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right Secondary</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left Primary</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Secondary</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Right Primary + Left Primary together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/khr/generic_controller</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_KHR_generic_controller</code></div>
+  </details>
+</article>
+<article class="card abxy" data-profile="hp-mixed-reality">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>HP Reverb G2 / HP Mixed Reality controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; HP controller hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping when the runtime exposes the HP Mixed Reality profile extension.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left X</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Y</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left X together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/hp/mixed_reality_controller</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_EXT_hp_mixed_reality_controller</code></div>
+  </details>
+</article>
+<article class="card wmr-trackpad" data-profile="samsung-odyssey">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / wmr-trackpad</p>
+      <h2>Samsung Odyssey controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; Samsung controller hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping when the profile and d-pad extensions are available.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Press top of right trackpad</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Press bottom of right trackpad</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Press top of left trackpad</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Press center of left trackpad</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Press center of right trackpad</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Press bottom of left trackpad</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Press top of right trackpad + Press top of left trackpad together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/samsung/odyssey_controller</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_EXT_samsung_odyssey_controller</code></div>
+  </details>
+</article>
+<article class="card abxy" data-profile="htc-vive-cosmos">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>HTC Vive Cosmos controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; Vive Cosmos hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping. Right system and both shoulder buttons are left untouched.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left X</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Y</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left X together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/htc/vive_cosmos_controller</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_HTC_vive_cosmos_controller_interaction</code></div>
+  </details>
+</article>
+<article class="card abxy" data-profile="htc-vive-focus3">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>HTC Vive Focus 3 controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; Vive Focus 3 hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping. The right system button remains runtime-owned.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left X</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Y</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left X together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/htc/vive_focus3_controller</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_HTC_vive_focus3_controller_interaction</code></div>
+  </details>
+</article>
+<article class="card abxy" data-profile="pico-neo3">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>PICO Neo 3 controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; PICO Neo 3 hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping when the ByteDance controller profile extension is available. System buttons remain runtime-owned.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left X</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Y</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left X together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/bytedance/pico_neo3_controller</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_BD_controller_interaction</code></div>
+  </details>
+</article>
+<article class="card abxy" data-profile="pico4">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>PICO 4 controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; PICO 4 hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping when the ByteDance controller profile extension is available. The right system button remains runtime-owned.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left X</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Y</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left X together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/bytedance/pico4_controller</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_BD_controller_interaction</code></div>
+  </details>
+</article>
+<article class="card fallback" data-profile="pico-g3">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / fallback</p>
+      <h2>PICO G3 controllers</h2>
+    </div>
+    <span class="status suggested">Suggested partial mapping; PICO G3 hardware not headset-validated</span>
+  </div>
+  <p class="notes">Partial hardware profile: aim, triggers, both axes, stick-click utility actions, and pause. The standard profile exposes no squeeze, face buttons, or haptics.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/bytedance/pico_g3_controller</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_BD_controller_interaction</code></div>
+  </details>
+</article>
+<article class="card abxy" data-profile="pico-ultra">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>PICO Ultra controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; PICO Ultra hardware not headset-validated</span>
+  </div>
+  <p class="notes">Full mapping when the PICO Ultra controller profile extension is available. System buttons remain runtime-owned.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left X</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Y</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left X together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/bytedance/pico_ultra_controller_bd</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_BD_ultra_controller_interaction</code></div>
+  </details>
+</article>
+<article class="card abxy" data-profile="meta-touch-pro">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>Meta Touch Pro controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; the legacy Oculus Touch profile remains the proven fallback</span>
+  </div>
+  <p class="notes">Full mapping. The right system/Meta button remains runtime-owned.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left X</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Y</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left X together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/facebook/touch_controller_pro</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_FB_touch_controller_pro</code></div>
+  </details>
+</article>
+<article class="card abxy" data-profile="meta-touch-plus">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>Meta Touch Plus controllers</h2>
+    </div>
+    <span class="status suggested">Suggested mapping; the legacy Oculus Touch profile remains the proven fallback</span>
+  </div>
+  <p class="notes">Full mapping. The right system/Meta button remains runtime-owned.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left X</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left Y</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left Menu</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right A + Left X together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/meta/touch_controller_plus</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_META_touch_controller_plus</code></div>
+  </details>
+</article>
+<article class="card abxy" data-profile="valve-frame">
+  <div class="card-head">
+    <div>
+      <p class="family">F.E.A.R. VR v0.1.0 / abxy</p>
+      <h2>Steam Frame controllers</h2>
+    </div>
+    <span class="status suggested">Experimental suggested mapping; Steam Frame hardware not headset-validated</span>
+  </div>
+  <p class="notes">Optional native Frame profile. Extra face, D-pad and bumper buttons can be assigned in Controls &amp; Layout. Generic/Touch fallback remains available when this extension is absent.</p>
+  <table>
+    <thead><tr><th>Physical control</th><th>Right-handed</th><th>Left-handed</th></tr></thead>
+    <tbody><tr><td>Triggers</td><td>Fire; menu select</td><td>Fire; menu select</td></tr>
+<tr><td>Grip / squeeze</td><td>Grab, support, and physical actions</td><td>Grab, support, and physical actions</td></tr>
+<tr><td>Thumbsticks</td><td>Left moves; right turns, jumps, and crouches</td><td>Standard is unchanged; optional Southpaw swaps the axes</td></tr>
+<tr><td>Right A</td><td>Slow-Mo</td><td>Use / interact</td></tr>
+<tr><td>Right B</td><td>Reload</td><td>Grenade / throwable</td></tr>
+<tr><td>Left D-pad down</td><td>Use / interact</td><td>Slow-Mo</td></tr>
+<tr><td>Left stick click</td><td>Start running; tap: Walk/Run; hold: Medkit</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td></tr>
+<tr><td>Right stick click</td><td>Sticky only: tap switches/Unarmed; hold opens wheel. Holsters: disabled</td><td>Start running; tap: Walk/Run; hold: Medkit</td></tr>
+<tr><td>Left D-pad left</td><td>Grenade / throwable</td><td>Reload</td></tr>
+<tr><td>Left View</td><td>Pause menu</td><td>Pause menu</td></tr>
+<tr><td>Right X</td><td>Available for remapping</td><td>Available for remapping</td></tr>
+<tr><td>Right Y</td><td>Available for remapping</td><td>Available for remapping</td></tr>
+<tr><td>Left D-pad up</td><td>Available for remapping</td><td>Available for remapping</td></tr>
+<tr><td>Left D-pad right</td><td>Available for remapping</td><td>Available for remapping</td></tr>
+<tr><td>Left bumper</td><td>Available for remapping</td><td>Available for remapping</td></tr>
+<tr><td>Right bumper</td><td>Available for remapping</td><td>Available for remapping</td></tr>
+<tr><td>Right A + Left D-pad down together (SteamVR)</td><td>Pause menu</td><td>Pause menu</td></tr></tbody>
+  </table>
+  <details>
+    <summary>OpenXR mapping profile</summary>
+    <div><code>/interaction_profiles/valve/frame_controller_valve</code></div>
+    <div><strong>Needs runtime extension:</strong> <code>XR_VALVE_frame_controller_interaction</code></div>
+  </details>
+</article>
+  </section>
+  <footer>Binding data last updated 2026-09-10; RC6.2 guide reviewed September 11, 2026. Profiles included: 17. Generated from config/controller-mappings.json; SteamVR pause behavior is handled by GameClient.</footer>
+</main>
+</body>
+</html>

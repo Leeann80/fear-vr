@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the troubleshooting guide
+    url: https://github.com/thefreemike31/fear-vr/blob/main/TROUBLESHOOTING.md
+    about: Installation, runtime setup, graphics, controls, performance, and logs.
+  - name: Discord community (optional)
+    url: https://discord.gg/NtAnbK6z9B
+    about: Community discussion; GitHub issues do not require Discord membership.
