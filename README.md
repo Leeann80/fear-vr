@@ -5,7 +5,7 @@
 Play the original F.E.A.R. campaign in PC VR, with tracked hands, physical
 weapon handling, configurable controls, and comfort options.
 
-**First public release: v0.1.0. Free, unofficial, and made by TheFreeMike.**
+**Current release: v0.1.1. Free, unofficial, and made by TheFreeMike.**
 You need a legitimate copy of the supported **GOG F.E.A.R. Platinum Collection**
 and a Windows PC capable of PC VR. The base game is not included.
 
@@ -36,7 +36,7 @@ and a native installer with recovery support.
 ## Start here
 
 1. Confirm the unmodified GOG base game works on your PC.
-2. From the release's **Assets** list, download `fear-vr-v0.1.0.zip` and its
+2. From the release's **Assets** list, download `fear-vr-v0.1.1.zip` and its
    `.sha256` file. GitHub's automatic **Source code** downloads are not the mod.
 3. Verify and extract the complete ZIP. Keep **setup-files** beside
    **F.E.A.R. VR Setup.exe**.
@@ -81,7 +81,7 @@ does not mean that hardware has been physically tested.
 | [Calibration](CALIBRATION.md) | Set height, fit hands, move holsters, and reset individual adjustments |
 | [Troubleshooting](TROUBLESHOOTING.md) | Work through startup, graphics, controllers, performance, audio, and save issues |
 | [Known limitations](KNOWN-LIMITATIONS.md) | Check hardware coverage and experimental features |
-| [Release notes](RELEASE-NOTES.md) | See what this first public build contains |
+| [Release notes](RELEASE-NOTES.md) | See the latest fixes and update instructions |
 | [Security and privacy](SECURITY.md) | Understand installation, unsigned files, and diagnostic privacy |
 | [Third-party notices](THIRD-PARTY-NOTICES.md) | Read component notices and licenses |
 

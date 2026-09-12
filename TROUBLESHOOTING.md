@@ -1,4 +1,4 @@
-# Troubleshooting F.E.A.R. VR v0.1.0
+# Troubleshooting F.E.A.R. VR v0.1.1
 
 Support here covers **F.E.A.R. VR by TheFreeMike**, downloaded from
 [thefreemike31/fear-vr](https://github.com/thefreemike31/fear-vr/releases).
