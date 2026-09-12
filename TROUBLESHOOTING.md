@@ -28,9 +28,10 @@ at a time, and save logs from the failing attempt before relaunching.
 
 | Symptom | Start here |
 | --- | --- |
-| ZIP missing, deleted, or blocked | [Download or antivirus](#download-or-antivirus-problem) |
+| Defender blocks the mod, or Setup says a file is missing | [Allow the official mod](#download-or-antivirus-problem) |
 | Install/upgrade/recovery error | [Setup](#setup-stops-or-recovery-fails) |
 | Launcher error or monitor-only game | [Startup](#launcher-error-or-game-only-on-the-monitor) |
+| Always starts flat despite correct VR setup | [ReShade OpenXR conflict](#always-starts-flat-reshade-openxr-conflict) |
 | Black, frozen, boxed, or distorted image | [Headset image](#black-frozen-boxed-or-distorted-headset-view) |
 | Missing controller input or pause | [Controllers](#controllers-menus-or-pause) |
 | Bad fit or missing calibration room | [Calibration](#calibration-or-player-height) |
@@ -42,17 +43,52 @@ at a time, and save logs from the failing attempt before relaunching.
 
 ## Download or antivirus problem
 
-Download from [the official GitHub release](https://github.com/thefreemike31/fear-vr/releases/latest).
-Check your browser's Downloads panel and **Windows Security > Virus & threat
-protection > Protection history** if a file vanishes. Record the exact threat
-name, blocked filename, and security-intelligence version. A named threat is
-different from an unsigned-publisher or reputation warning.
+**Some players have had Windows Defender block or remove mod files. Allowing
+the mod resolved one reported installation failure.** This does not happen on
+every PC; a detection still needs to be checked against the official download.
 
-Keep protection enabled. Do not add broad exclusions or fetch a replacement
-DLL from an unofficial mirror. Report the release and detection through GitHub
-Issues. If the ZIP hash differs from the published checksum, do not install it;
-download a fresh copy. If Setup says a payload is missing after a matching ZIP
-was extracted, check whether antivirus removed a file during extraction.
+Typical symptoms include a disappearing ZIP or launcher, or Setup reporting
+**Cannot verify file** / **Expected a regular file** for **F.E.A.R. VR.exe**.
+Antivirus can interfere with both the extracted package and the temporary copy
+Setup creates inside the game folder. These errors alone do not prove antivirus
+is responsible.
+
+### Allow the official mod in Windows Defender
+
+1. Use only [the official GitHub release](https://github.com/thefreemike31/fear-vr/releases/latest).
+   [Compare the ZIP's SHA-256](INSTALLATION.md#download-and-verify) with the
+   published checksum. A match verifies the download's identity, not an
+   antivirus verdict. Do not allow a mismatched or unofficial download.
+2. Open **Windows Security > Virus & threat protection > Protection history**.
+   Expand the event and check that **Affected items** names the official mod
+   ZIP or a file in its extracted package or your F.E.A.R. game folder.
+3. If you trust that verified download and choose to allow it, use **Actions >
+   Allow on device**, when offered. If it is quarantined, choose **Restore**;
+   Defender may detect it again, in which case review that event and choose
+   **Allow on device**. Button names depend on the event's current status.
+4. Close Setup and **extract the entire ZIP again into a fresh folder**, keeping
+   **setup-files** beside **F.E.A.R. VR Setup.exe**. If the ZIP itself was removed,
+   download it again and verify it first. Rerun Setup. Allowing a detection does
+   not automatically repair an already incomplete extraction.
+
+If Defender keeps removing verified mod files during extraction or installation,
+you can use a **targeted folder exclusion**: **Virus & threat protection > Manage
+settings > Exclusions > Add or remove exclusions > Add an exclusion > Folder**.
+Choose the dedicated folder where you will extract this mod; if the blocked
+path is inside the installed game, also choose that specific F.E.A.R. game
+folder. Then extract again and retry Setup. Excluded folders are not scanned
+by Defender's real-time protection, so use them only for trusted files. Never
+exclude an entire drive, all Downloads, or every EXE/DLL, and leave protection
+enabled. Remove the temporary extraction-folder exclusion after installation;
+you can remove any exclusion from the same screen when it is no longer needed.
+
+The `.sha256` file and `Get-FileHash` only verify the ZIP; they do not restore
+missing files. An unsigned-publisher/SmartScreen warning is a separate issue.
+If you are still stuck, the threat name and affected path are useful in a
+GitHub issue, but no extra report is needed once your problem is solved.
+
+Microsoft help: [Protection history and restoring files](https://learn.microsoft.com/en-us/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus)
+and [antivirus exclusions](https://support.microsoft.com/en-us/defender/antivirus-and-antimalware-software-faq).
 
 ## Setup stops or recovery fails
 
@@ -92,6 +128,48 @@ Normal and administrator launcher startup are supported with the matching
 bridge. An error requesting a matching bridge means reinstall/upgrade the
 complete package; mixing older DLLs will not repair it. Meta Link and Air Link
 remain unsupported even if SteamVR is running.
+
+### Always starts flat: ReShade OpenXR conflict
+
+**If you launch F.E.A.R. VR.exe and the game always stays on the monitor despite
+a working headset/runtime setup, check for a ReShade OpenXR layer left by another
+game or tool.** A player reported that disabling its 32-bit registration fixed
+this problem. It is one possible cause, not a fix for every flat launch.
+
+1. Close F.E.A.R. and any other running VR games.
+2. Press **Windows + R**, type **regedit**, and press Enter. Approve the Windows
+   administrator prompt.
+3. Paste this exact path into Registry Editor's address bar and press Enter:
+
+   ```text
+   HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Khronos\OpenXR\1\ApiLayers\Implicit
+   ```
+
+4. In the right pane, look for a **REG_DWORD** entry named:
+
+   ```text
+   C:\ProgramData\ReShade\ReShade32_XR.json
+   ```
+
+   The installation path can differ; identify the **ReShade32_XR.json** entry.
+   If the key or that entry is absent, stop here and return to the startup
+   checks above. Do not create it or change other layers.
+5. Right-click the **Implicit** key in the left pane and choose **Export** to
+   save a backup. Note the ReShade entry's original value. Double-click that
+   entry in the right pane and set **Value data** to **1**, then click **OK**.
+   **0 enables the layer; 1 disables it.** If it is already 1, it is already
+   disabled and this particular workaround adds nothing.
+6. Close Registry Editor. Fully exit **Virtual Desktop Streamer** from its PC
+   system-tray icon, reopen it, and reconnect the headset. If using SteamVR,
+   restart SteamVR instead. Launch **F.E.A.R. VR.exe** again.
+
+This disables that ReShade OpenXR layer for **other 32-bit OpenXR applications
+on this PC too**. To undo it, restore the entry's original value (normally
+**0**) and restart your VR connection software. If it does not help, undo the
+change before trying another fix. Change the registry value only; do not delete
+the JSON file or the whole registry key, and do not change **ActiveRuntime**.
+
+The enable/disable values follow the [Khronos OpenXR loader specification](https://registry.khronos.org/OpenXR/specs/1.1/loader.html#windows-manifest-registry-usage).
 
 ## Black, frozen, boxed, or distorted headset view
 

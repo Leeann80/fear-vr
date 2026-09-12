@@ -32,6 +32,13 @@ GameServer retain the original Visual C++ 7.1 compatibility toolchain and do
 not advertise those modern PE mitigations; do not mix this beta with untrusted
 mods, maps, archives, or saves.
 
+## Antivirus blocks
+
+For a Defender block or quarantined mod file, see [the troubleshooting steps
+for allowing the official download](TROUBLESHOOTING.md#download-or-antivirus-problem).
+Any allow rule or exclusion is your choice in Windows Security; Setup does not
+change antivirus settings. Keep protection enabled and exclusions narrowly scoped.
+
 ## Diagnostics
 
 Normal player launches keep verbose developer diagnostics disabled. Read

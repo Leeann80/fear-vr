@@ -12,6 +12,11 @@ and a Windows PC capable of PC VR. The base game is not included.
 [Download the latest release](https://github.com/thefreemike31/fear-vr/releases/latest)
 · [Installation](INSTALLATION.md) · [Troubleshooting](TROUBLESHOOTING.md)
 
+**Defender blocked the mod or Setup says a file is missing?**
+[Allow the official mod and restore missing files](TROUBLESHOOTING.md#download-or-antivirus-problem).
+**Game always starts flat despite correct VR setup?**
+[Check the ReShade OpenXR conflict](TROUBLESHOOTING.md#always-starts-flat-reshade-openxr-conflict).
+
 ## Make sure you have the right mod
 
 This is **TheFreeMike's F.E.A.R. VR**, distributed by **thefreemike31**.
