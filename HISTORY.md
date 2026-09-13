@@ -64,6 +64,7 @@ implemented and tested before the release that collected them.
 | September 10 | RC6.2 | Clarified physical holster versus Classic Sticky switching, prevented stowed-weapon reloads, refined tutorial resets and reload cues, improved ladder recovery, added capture safeguards, and introduced optional dual-pistol indicator colors. |
 | September 11 | Public v0.1.0 | Released the accepted RC6.2 campaign baseline publicly, with corrected startup diagnostics, Alma application icons, and a comprehensive set of player guides. |
 | September 12 | Public v0.1.1 | Fixed ladder progression and calibrated pistol support-hand drift for the GOG release. |
+| September 13 | Public v0.1.2 | Added VR subtitles, closed-fist melee, separate effects shake and wrist HUD controls; fixed Bad Water gaze-trigger progression. |
 
 ## The work between the release numbers
 

@@ -1,6 +1,6 @@
 # Controls and weapon handling
 
-[Main guide](README.md) · [Calibration](CALIBRATION.md) · [Troubleshooting](TROUBLESHOOTING.md)
+[Main guide](README.md) | [Calibration](CALIBRATION.md) | [Troubleshooting](TROUBLESHOOTING.md)
 
 Open **Controller Layouts.html** from the downloaded ZIP or the installed
 **FEAR-VR-Install** folder for the default buttons for your controller profile.
@@ -38,9 +38,13 @@ You start in run mode. With default Touch controls and **Tap to Walk** enabled,
 tap the left stick to walk, and tap again to run. **Hold** that utility control
 for a medkit; tapping and holding are different actions.
 
-Use **Movement & Comfort** for play position, turning, turn speed, and comfort
+Use **Options > VR Settings > Comfort & Movement** for play position, turning, turn speed, and comfort
 options. Smooth turning defaults to 180 degrees/second; lower it or choose snap
 turning to suit you. Review vignette and camera-driven-scene options before play.
+
+**Damage Camera Motion** and **Explosion / Effects Shake** are independent.
+Keep explosion shake while disabling damage motion, or turn each off separately.
+The effects option also controls authored environmental camera shake.
 
 ## Choose a weapon-handling mode
 
@@ -57,6 +61,16 @@ Under **Immersion & Interaction**, **Visible Holstered Weapons** controls passiv
 body weapon/belt models. Setting it to No hides their presentation; the body
 draw/reload locations still work. Calibration references remain visible.
 
+**Wrist HUD** on the same page hides or shows the wrist display. It defaults
+to Yes and is saved independently; immersion presets do not change it.
+
+## Subtitles
+
+For dialogue subtitles, open **Options > VR Settings > Guidance Cards** and
+set **Subtitles** to **Yes**. **Subtitle Size** adjusts readability from 75% to
+150% (default 100%). This uses the same setting as the game's subtitle option.
+Long captions scroll within the panel.
+
 ## Reloading and interactions
 
 Manual reload uses weapon-specific actions and contextual cards. Hold the gun,
@@ -70,6 +84,11 @@ prefer button reloads.
 If a reload seems stuck, check the held weapon, reserve ammo, chamber/racking
 state, and selected reload mode before repeatedly pressing buttons. Recalibrate
 the pouch if its position is the problem. See [Troubleshooting](TROUBLESHOOTING.md#weapon-reload-holster-or-interaction-problem).
+
+Empty-hand melee works with either an open hand or a closed fist on enemies
+and breakable glass/planks. Keep the striking hand free: holding a prop,
+supporting a weapon, reloading, or climbing takes priority. Firing a held gun
+does not also add physical weapon-strike damage.
 
 Physical pickups, weapon exchange, melee, and ladders depend on eligible objects
 and free hands. A decorative prop is not necessarily grabbable. Clear held
