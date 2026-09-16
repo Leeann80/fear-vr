@@ -4,7 +4,7 @@ The first public release arrived on **September 11, 2026**, after weeks of
 prototype development, headset testing, private betas, and player feedback.
 The earliest retained development checkpoint is **July 21, 2026**: a working
 VR prototype already existed at that point. This timeline covers the recorded
-work from that checkpoint through the public launch, rather than claiming an
+work from that checkpoint through the unified v1.1 release, rather than claiming an
 exact date for the project's first experiment.
 
 This is a summary of TheFreeMike's project. It is separate from the
@@ -27,10 +27,22 @@ See [Credits and AI transparency](README.md#credits-and-ai-transparency).
 
 ## From prototype to a playable campaign
 
-**September 16 — v1.1.0 unified release.** Accepted tester-feedback fixes improve
-aiming, weapon transfers, pickups, jumping, remote-charge handling and ladder
-completion. The unified package adds the accepted Steam input polling fix and
-teal-lit menu floor with TheFreeMike's pink cat credit for GOG and Steam players.
+**September 16 — v1.1.0 unified release.** One installer and launcher bring the
+original GOG and Steam base games into the same public package. Version 1.0's
+tester feedback led to steadier aiming, smoother hand-to-hand firearm transfers,
+better pickup priority, more deliberate jumping, and improved ladder completion.
+Remote-charge detonators now yield when either hand draws a firearm and return
+to the dominant hand after release while a charge remains active, including
+repeated grab/release cycles.
+
+Menus gained a dark floor with a matching teal-green glow and TheFreeMike's
+pink cat logo with **Made by thefreemike** beneath the menu. The floor and credit
+hide during level loading to prevent flicker. Steam also gained the accepted
+input polling fix, while the unified installer preserves edition-specific
+startup and supports upgrades, uninstall and interrupted-setup recovery.
+Steam level loading can still take several minutes; GOG remains recommended.
+Some reported performance stalls and the specific Blindside tunnel still need
+affected-player/headset confirmation. See the [v1.1 release notes](RELEASE-NOTES.md).
 
 **September 14–15 — v1.0.0 testing release.** The unified GOG/Steam package
 passed automated installation checks and was tested by testers. Mike accepted
@@ -75,6 +87,7 @@ implemented and tested before the release that collected them.
 | September 11 | Public v0.1.0 | Released the accepted RC6.2 campaign baseline publicly, with corrected startup diagnostics, Alma application icons, and a comprehensive set of player guides. |
 | September 12 | Public v0.1.1 | Fixed ladder progression and calibrated pistol support-hand drift for the GOG release. |
 | September 13 | Public v0.1.2 | Added VR subtitles, closed-fist melee, separate effects shake and wrist HUD controls; fixed Bad Water gaze-trigger progression. |
+| September 16 | Public v1.1.0 | Unified GOG/Steam installer and launcher; aiming, hand transfers, pickups, jumping, remote detonator and ladder fixes; Steam input polling improvement; teal-lit menu floor and creator credit. |
 
 ## The work between the release numbers
 
