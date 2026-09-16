@@ -11,6 +11,17 @@ This is a summary of TheFreeMike's project. It is separate from the
 [DR-89/fear-vr project](https://github.com/DR-89/fear-vr); this repository's
 support covers releases published by TheFreeMike here.
 
+## September 16, 2026 - v1.1.1 GOG compatibility hotfix
+
+A player report exposed an installer and launcher mistake in v1.1.0: the
+original GOG Input wrapper was being rejected as another mod loader. Codex had
+missed this known compatibility requirement, and the release fixtures omitted
+the wrapper. Version 1.1.1 accepts the exact verified GOG wrapper with the
+verified GOG executable and preserves it. The regression fixtures now include
+that file; unrelated and modified loaders remain blocked. Gameplay files are
+unchanged. The player's separate worsening-frame-time report is not yet verified
+as resolved.
+
 ## A human–AI collaboration
 
 TheFreeMike and **Codex, OpenAI's AI coding assistant**, worked together through
