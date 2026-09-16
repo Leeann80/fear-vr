@@ -6,6 +6,8 @@ This F.E.A.R. VR package contains or incorporates:
   `9ef1464462490c2469a15aff27528a8eed801cd5`, with the F.E.A.R. VR ResetEx and
   DirectSound/EAX integration patches. Its complete multi-license notice is
   included as `licenses\dxwrapper.txt`.
+- DxWrapper's graphics bootstrap stub, installed on Steam, with its separate
+  notice included as `licenses\DxWrapper-Stub.txt`.
 - DSOAL r444, used as the DirectSound3D and EAX compatibility runtime. Its
   license is included as `licenses\DSOAL.txt`.
 - OpenAL Soft 1.23.1, used as DSOAL's Win32 software audio backend. Its license

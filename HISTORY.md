@@ -27,6 +27,16 @@ See [Credits and AI transparency](README.md#credits-and-ai-transparency).
 
 ## From prototype to a playable campaign
 
+**September 16 — v1.1.0 unified release.** Accepted tester-feedback fixes improve
+aiming, weapon transfers, pickups, jumping, remote-charge handling and ladder
+completion. The unified package adds the accepted Steam input polling fix and
+teal-lit menu floor with TheFreeMike's pink cat credit for GOG and Steam players.
+
+**September 14–15 — v1.0.0 testing release.** The unified GOG/Steam package
+passed automated installation checks and was tested by testers. Mike accepted
+the testing-release checkpoint; feedback fixes form v1.1.0, with updated
+packaging and documentation. Version 1.0 was not publicly published.
+
 **July 21–30 — Building the VR foundation.** The recorded work developed the
 room-scale rig, tracked weapon aiming, dual-wield controls, throwable handling,
 physical hand/prop contact, analog walking, and tactile feedback. Menus and

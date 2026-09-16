@@ -42,6 +42,9 @@ Use **Options > VR Settings > Comfort & Movement** for play position, turning, t
 options. Smooth turning defaults to 180 degrees/second; lower it or choose snap
 turning to suit you. Review vignette and camera-driven-scene options before play.
 
+Jump needs a deliberate upward stick push. After stick-crouching, briefly return
+the stick to center before pushing up to jump. A double tap is not required.
+
 **Damage Camera Motion** and **Explosion / Effects Shake** are independent.
 Keep explosion shake while disabling damage motion, or turn each off separately.
 The effects option also controls authored environmental camera shake.
@@ -72,6 +75,15 @@ set **Subtitles** to **Yes**. **Subtitle Size** adjusts readability from 75% to
 Long captions scroll within the panel.
 
 ## Reloading and interactions
+
+After throwing a remote charge, its detonator returns to your dominant hand
+while a charge is active. You can still draw a firearm with that hand: the
+detonator hides while the firearm is held and returns when you release it.
+This also works across repeated grabs and releases.
+
+Nearby eligible pickups take priority over hip holsters. Release Grip and reach
+away from the pickup to draw from a body slot deliberately. A weapon can be
+carried even with full inventory; storing it still requires the normal exchange.
 
 Manual reload uses weapon-specific actions and contextual cards. Hold the gun,
 use the reload/ammo-pouch interactions shown by the current lesson, and complete

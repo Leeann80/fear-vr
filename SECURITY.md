@@ -7,7 +7,8 @@ security-software exclusion.
 
 The included native **F.E.A.R. VR Setup.exe**:
 
-- accepts only the verified GOG `FEAR.exe` and original GOG `d3d9.dll`;
+- accepts only verified GOG or original Steam `FEAR.exe` files, preserving the
+  original game executable and GOG graphics loader;
 - verifies the package manifest against the identity compiled into Setup and
   checks every payload file against that manifest;
 - stages and re-verifies files before installation;
@@ -16,7 +17,10 @@ The included native **F.E.A.R. VR Setup.exe**:
   finish; and
 - preserves modified managed files under `FEAR-VR-Install/preserved-files`
   before an upgrade or uninstall, then restores original files or removes files
-  created by the mod. Saves and profiles are kept.
+  created by the mod. Saves and profiles are kept;
+- installs the included graphics bootstrap and exact-hash input polling fix on
+  Steam. GOG does not receive the Steam input DLL. Other conflicting loaders
+  remain rejected.
 
 Setup does not launch F.E.A.R. For a protected game folder, you can run Setup
 as administrator. If setup is interrupted, reopen it for the same game folder
@@ -29,7 +33,7 @@ This package is not Authenticode-signed. Compare the ZIP against the
 SHA-256 published with the release before running it. The bridge, launcher, and
 DxWrapper are PE32/x86 binaries with ASLR and DEP/NX enabled. GameClient and
 GameServer retain the original Visual C++ 7.1 compatibility toolchain and do
-not advertise those modern PE mitigations; do not mix this beta with untrusted
+not advertise those modern PE mitigations; do not mix this mod with untrusted
 mods, maps, archives, or saves.
 
 ## Antivirus blocks

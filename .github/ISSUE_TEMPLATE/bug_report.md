@@ -13,7 +13,7 @@ Do not post private paths, crash dumps, original game files, or credentials.
 - Mod author / original download URL (support here covers TheFreeMike releases):
 - Mod version and ZIP checksum verified:
 - Fresh install or upgrade (previous version):
-- Supported GOG base game works without VR: yes / no / not checked
+- Edition (GOG or Steam), and unmodified base game works without VR: yes / no / not checked
 
 **Hardware and runtime**
 - Headset and controllers:

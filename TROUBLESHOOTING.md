@@ -1,4 +1,4 @@
-# Troubleshooting F.E.A.R. VR v0.1.2
+# Troubleshooting F.E.A.R. VR v1.1.0
 
 Support here covers **F.E.A.R. VR by TheFreeMike**, downloaded from
 [thefreemike31/fear-vr](https://github.com/thefreemike31/fear-vr/releases).
@@ -14,11 +14,11 @@ at a time, and save logs from the failing attempt before relaunching.
 
 ## Start with these checks
 
-1. Use the supported GOG base game on Windows 10/11. Confirm it works without
+1. Use the verified GOG or Steam base game on Windows 10/11. Confirm it works without
    the VR mod. Expansions and other executable versions are unsupported.
 2. Verify the official ZIP's SHA-256 and extract the entire archive into a new
    folder. Keep **setup-files** beside Setup. See [the download steps](INSTALLATION.md#download-and-verify).
-3. Use **F.E.A.R. VR.exe** in the installed game folder. A GOG shortcut or
+3. Use **F.E.A.R. VR.exe** in the installed game folder. A store shortcut or
    **FEAR.exe** can start the flat game instead.
 4. Connect and wake the headset and both controllers before launching. Choose
    either VDXR or SteamVR using [the connection instructions](INSTALLATION.md#connect-the-headset).
@@ -95,8 +95,8 @@ and [antivirus exclusions](https://support.microsoft.com/en-us/defender/antiviru
 Read the complete error. Close F.E.A.R., check the selected folder contains the
 base game's **FEAR.exe**, verify the archive, and extract it again into a new
 folder if its contents are incomplete. Use the new Setup's **Upgrade** action
-for an existing beta. Unsupported executable errors require the supported GOG
-copy, not bypassing the check.
+for an existing beta. Unsupported executable errors require a verified original GOG or Steam
+base-game executable, not bypassing the check.
 
 For access-denied errors in a protected folder, close Setup and run that same
 Setup as administrator. For a locked-file error, close the game and any tool
@@ -324,7 +324,7 @@ then open one issue per distinct problem:
 ```text
 F.E.A.R. VR version and ZIP checksum verified:
 Fresh install or upgrade (from which version):
-Supported GOG base game works without VR: yes / no / not checked
+Edition (GOG or Steam), and unmodified base game works without VR: yes / no / not checked
 Headset and controllers:
 Connection route and OpenXR runtime/version:
 Windows, CPU, GPU/VRAM, driver version, RAM:
@@ -340,3 +340,35 @@ Other mods/overlays and changes already tried:
 [Discord](https://discord.gg/NtAnbK6z9B) is also available for community discussion.
 Responses depend on availability; neither a report nor a donation guarantees
 individual troubleshooting or a response deadline.
+
+## Steam startup or handoff failure
+
+Sign into the Steam account that owns the base game. Start the VR launcher from
+the same game folder registered with Steam, and leave it open while Steam starts
+F.E.A.R. Close the failed game/launcher and retry after correcting the reported
+problem. Do not replace the Steam executable with the GOG executable or apply
+DRM/LAA patches. A copied Steam folder outside its registered library is rejected.
+
+If Setup reports a conflicting loader, use that mod's own removal instructions
+or select a clean installation. Verifying Steam files does not remove additional
+mod DLLs. Long level loads are a known Steam limitation; hangs and startup errors
+should still be reported with the exact error and launcher log.
+
+## Steam input fix
+
+Setup installs the mod's own `dinput8.dll` only on Steam. It reduces legacy HID
+device polling while keeping keyboard, mouse and OpenXR input available. The
+owner reported smoother gameplay, including slow motion; it does not fix long
+Steam level loads or promise a particular frame rate on every PC.
+
+Legacy flat-game gamepads/joysticks are filtered while this fix is enabled.
+If you need them or want to compare behavior, close the game and create an empty
+file named `fearvr-hid-off.flag` beside **FEAR.exe**. Check that Windows has not
+added `.txt`. Remove that flag to re-enable the fix on the next launch. No Windows
+device needs disabling. `FEARVR-Input.log` records the selected mode and limited
+enumeration counts; it does not list device names.
+
+Do not copy this DLL to GOG or replace it with another input wrapper. Setup and
+the launcher accept only this release's verified Steam input fix; other loader
+conflicts still require a clean installation. Uninstall restores the original
+files or removes the input DLL when Setup created it.

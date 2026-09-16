@@ -4,26 +4,26 @@
 
 ## Before installing
 
-Use the supported GOG **F.E.A.R. Platinum Collection** base game on Windows
-10/11. Start the unmodified game once and confirm that it reaches the menu and
+Use the verified GOG **F.E.A.R. Platinum Collection** or original Steam
+**F.E.A.R. base game** on Windows 10/11. Start the unmodified game once and confirm that it reaches the menu and
 loads a level, then quit. Fix an existing flat-game launch failure first.
 Setup rejects unsupported executable versions; do not substitute an executable
 from an unrelated patch or mod to get past that check.
 
-For a clean baseline, start with a separate unmodified GOG installation rather
+For a clean baseline, start with a separate unmodified GOG or Steam installation rather
 than combining graphics wrappers, audio replacements, or other mods. Keep
 your normal save backups. This release covers the original single-player campaign.
 
 ## Download and verify
 
 1. Open [GitHub Releases](https://github.com/thefreemike31/fear-vr/releases/latest).
-2. Expand **Assets** if needed. Download **fear-vr-v0.1.2.zip** and
-   **fear-vr-v0.1.2.zip.sha256**. Ignore GitHub's automatic Source code archives.
+2. Expand **Assets** if needed. Download **fear-vr-v1.1.0.zip** and
+   **fear-vr-v1.1.0.zip.sha256**. Ignore GitHub's automatic Source code archives.
 3. Open the `.sha256` file in Notepad. Its first 64 characters are the expected hash.
 4. In the folder containing the ZIP, open PowerShell and run:
 
    ```powershell
-   Get-FileHash -Algorithm SHA256 -LiteralPath '.\fear-vr-v0.1.2.zip'
+   Get-FileHash -Algorithm SHA256 -LiteralPath '.\fear-vr-v1.1.0.zip'
    ```
 
 5. Compare all 64 characters. Letter case does not matter. A mismatch means
@@ -54,6 +54,10 @@ that fails. Do not remove the recovery folder to force another installation.
 Setup backs up replaced files and preserves modified managed files under
 **FEAR-VR-Install/preserved-files**. Saves and profiles are kept. Keep the
 **FEAR-VR-Install** folder and its backups while the mod is installed.
+
+On Steam, Setup also manages the included input polling fix. GOG does not receive
+that input DLL. Upgrades from the v1.0 tester package use the same **Upgrade**
+action; keep the original installation's recovery files.
 
 ## Connect the headset
 
@@ -90,7 +94,7 @@ Meta Quest Link and Air Link are unsupported, including through SteamVR.
 
 ## First launch
 
-Use **F.E.A.R. VR.exe**, not **FEAR.exe** or an existing GOG shortcut that starts
+Use **F.E.A.R. VR.exe**, not **FEAR.exe** or an existing store shortcut that starts
 the flat game. You can make a desktop shortcut to the VR executable. Leave it
 beside the installed game; do not move the executable itself to the desktop.
 
@@ -122,3 +126,18 @@ setup**. When recovery succeeds, retry the install, upgrade, or uninstall.
 If it reports changed files or a damaged snapshot, stop and preserve the error
 and the **FEAR-VR-Install** folder. Do not delete receipts/backups or repeatedly
 overwrite files. Follow [Setup recovery troubleshooting](TROUBLESHOOTING.md#setup-stops-or-recovery-fails).
+
+## Steam installation and startup
+
+If Setup detects multiple copies, select the Steam base-game folder you intend
+to test. Keep the original store executable. Sign into Steam with the owning
+account, then use **F.E.A.R. VR.exe** in that folder. Do not close the launcher
+during startup. A failed Steam VR handoff stops with an error instead of silently
+continuing in flat mode. Steam level loading may take several minutes.
+
+Setup rejects conflicting loaders, including unrecognized input wrappers. The
+exact Steam input fix included in this release is allowed on Steam only.
+Disable other mods using their own instructions, or use a clean installation.
+Store file verification may leave additional mod DLLs behind. GOG and Steam use
+the same public Documents save/profile location; keep your existing save backups.
+Setup does not start the game and uninstall retains saves and profiles.

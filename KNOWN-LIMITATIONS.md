@@ -2,9 +2,19 @@
 
 [Main guide](README.md) · [Troubleshooting](TROUBLESHOOTING.md)
 
-- This release targets the supported GOG base-game single-player campaign.
-  Expansions, multiplayer, Steam/retail executable variants, and Linux/Proton
+- This release targets verified GOG and original Steam base-game single-player
+  campaigns. Other executable variants, expansions, multiplayer and Linux/Proton
   are outside its supported scope.
+- Steam level loading can take several minutes. GOG remains recommended.
+  Other mod loaders and hook suites are not validated together with this mod.
+- Steam's included input fix filters legacy gamepad/joystick enumeration;
+  keyboard, mouse and OpenXR controllers remain available. This also applies
+  to flat launches from that installation while the fix is enabled. See
+  [Troubleshooting](TROUBLESHOOTING.md#steam-input-fix) for the optional off switch.
+- Some small props still sit slightly away from the hand. Ladder completion
+  improved in repeated owner testing; broader affected-player coverage remains.
+- Compact underwater collision is included, but the reported Blindside tunnel
+  has not yet been reproduced and verified in a headset.
 - Quest 3 with Touch controllers is the physical validation baseline. Other
   headsets, controller profiles, and wide/canted-headset display adjustments
   remain experimental. A listed mapping is not a guarantee of hardware coverage.
