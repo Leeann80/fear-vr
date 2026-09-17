@@ -1,4 +1,4 @@
-# F.E.A.R. VR by TheFreeMike
+# F.E.A.R. VR Mod by TheFreeMike
 
 <img src="assets/alma.png" alt="Alma, F.E.A.R. VR artwork" width="240">
 
@@ -9,13 +9,21 @@ weapon handling, configurable controls, and comfort options.
 You need a legitimate copy of the **GOG F.E.A.R. Platinum Collection** or the
 original **Steam F.E.A.R. base game**, and a Windows PC capable of PC VR. The base game is not included.
 
-[Download the latest release](https://github.com/thefreemike31/fear-vr/releases/latest)
+[Official website & trailer](https://thefreemike.com/fear-vr/) · [Download the latest release](https://github.com/thefreemike31/fear-vr/releases/latest)
 · [Installation](INSTALLATION.md) · [Troubleshooting](TROUBLESHOOTING.md)
 
 **Defender blocked the mod or Setup says a file is missing?**
 [Allow the official mod and restore missing files](TROUBLESHOOTING.md#download-or-antivirus-problem).
 **Game always starts flat despite correct VR setup?**
 [Check the ReShade OpenXR conflict](TROUBLESHOOTING.md#always-starts-flat-reshade-openxr-conflict).
+
+## Watch the F.E.A.R. VR trailer
+
+[![Watch the F.E.A.R. VR trailer by WunderbarVR](https://i.ytimg.com/vi/pRqdUyzCBeI/hqdefault.jpg)](https://www.youtube.com/watch?v=pRqdUyzCBeI)
+
+Trailer created by **[WunderbarVR](https://www.youtube.com/@WunderbarVR)**.
+Click the image to watch on the creator’s YouTube channel, or watch the embedded
+trailer on the [F.E.A.R. VR website](https://thefreemike.com/fear-vr/#trailer).
 
 ## Make sure you have the right mod
 
