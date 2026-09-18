@@ -1,4 +1,4 @@
-# Troubleshooting F.E.A.R. VR v1.1.1
+# Troubleshooting F.E.A.R. VR v1.2.0
 
 Support here covers **F.E.A.R. VR by TheFreeMike**, downloaded from
 [thefreemike31/fear-vr](https://github.com/thefreemike31/fear-vr/releases).
@@ -15,11 +15,11 @@ at a time, and save logs from the failing attempt before relaunching.
 ## GOG: Setup says another mod loader is present: dinput8.dll
 
 The v1.1.0 installer and launcher incorrectly rejected GOG's original Input
-wrapper. Use **v1.1.1 or later**; the verified original GOG file is allowed and
+wrapper. Use **v1.2.0 or later**; the verified original GOG file is allowed and
 preserved. Its presence does not mean you installed another mod.
 
 If you moved your original file to bypass that warning, close F.E.A.R., restore
-that same `dinput8.dll` to the GOG game folder and install v1.1.1. If it is lost,
+that same `dinput8.dll` to the GOG game folder and install v1.2.0. If it is lost,
 repair the game through GOG, then reinstall the VR mod. Do not substitute a DLL
 from a download site or the Steam edition. Unknown or modified loaders still
 need their own uninstall instructions or a clean supported installation.

@@ -4,12 +4,21 @@ The first public release arrived on **September 11, 2026**, after weeks of
 prototype development, headset testing, private betas, and player feedback.
 The earliest retained development checkpoint is **July 21, 2026**: a working
 VR prototype already existed at that point. This timeline covers the recorded
-work from that checkpoint through the unified v1.1 release, rather than claiming an
+work from that checkpoint through the v1.2 release, rather than claiming an
 exact date for the project's first experiment.
 
 This is a summary of TheFreeMike's project. It is separate from the
 [DR-89/fear-vr project](https://github.com/DR-89/fear-vr); this repository's
 support covers releases published by TheFreeMike here.
+
+## September 18, 2026 - v1.2 launcher and weapon polish
+
+A branded native launcher adds remembered fullscreen/windowed choices, 720p and
+1080p windowed modes, and direct access to controls and logs. Rifle work improves
+tactical reloads, bolt alignment and ASP scope retention. Shotgun shells reveal
+on approach and hide when full; the intake is easier to reach. SMG pouch magazines
+retain a consistent orientation, grenade grabs and returns are more reliable,
+and left-handed G2A2, SMG and shotgun support grips sit more naturally.
 
 ## September 16, 2026 - v1.1.1 GOG compatibility hotfix
 

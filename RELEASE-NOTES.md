@@ -1,59 +1,34 @@
-# F.E.A.R. VR v1.1.1 - GOG installer hotfix
+# F.E.A.R. VR v1.2.0 - New launcher and weapon polish
 
-- Fixes Setup and the VR launcher incorrectly identifying GOG's original
-  `dinput8.dll` Input wrapper as another mod loader.
-- The verified original GOG wrapper is kept unchanged through installation,
-  upgrade, recovery and uninstall. Unknown or modified loaders remain blocked.
-- Gameplay, rendering and the Steam input fix are unchanged from v1.1.0.
+- New branded desktop launcher with **Play in VR**, fullscreen/windowed mode,
+  720p or 1080p windowed resolution, Controls, and Open log folder. It remembers
+  your display choice. These settings affect the desktop mirror; headset
+  rendering stays unchanged.
+- ASP and G2A2 tactical magazine swaps no longer require racking when a round
+  remains chambered. Empty reloads still require the normal bolt pull. Rifle
+  bolts now travel along the gun, and the ASP scope is steadier while tilting.
+- Shotgun shells appear as your hand approaches the pouch, even with passive
+  holster models hidden. Grab them directly without pressing Reload. The shell
+  hides when the tube is full, and the loading opening is easier to reach.
+- SMG pouch magazines keep a consistent orientation when the gun is tilted.
+- Grenade grabbing works more reliably near overlapping shoulder/weapon slots.
+  Returning a grenade to its calibrated holster is more forgiving; release
+  farther from the holster when you intend to throw it.
+- Improved left-handed support-hand seating for the G2A2, SMG and shotgun.
+- Retains the v1.1.1 GOG original-input-wrapper fix and all earlier gameplay,
+  comfort, calibration, Steam input and menu improvements.
 
-If you moved your original GOG `dinput8.dll` to get past the v1.1.0 warning,
-close the game, put that same original file back, then install v1.1.1. If you
-no longer have it, repair the game through GOG and then reinstall the VR mod.
-Do not download a replacement DLL from an unrelated site or copy the Steam proxy.
-The reported worsening frame times still need affected-player confirmation;
-this hotfix corrects wrapper compatibility, not a verified performance regression.
-
-Extract the complete **fear-vr-v1.1.1.zip** into a fresh folder and run Setup.
-Keep **setup-files** beside it. Existing saves and profiles are preserved.
-
-## Included v1.1.0 changes - unified GOG and Steam release
-
-- One installer and VR launcher now support verified GOG and original Steam
-  base-game copies, including upgrade, uninstall and interrupted-setup recovery.
-- Steam startup passes VR settings through Steam automatically and handles its
-  quoted launch arguments. The original game executable stays unchanged.
-- Underwater swimming uses a shorter collision cylinder with a stable camera
-  reference and collision-checked restoration to standing height.
-- Steam includes the accepted input polling fix for smoother gameplay. It does
-  not shorten Steam level loads; results can vary with hardware.
-- Aiming is steadier with one or two hands, and firearm transfers between hands
-  blend smoothly into the receiving grip.
-- Nearby pickups take priority over hip holsters. Chest grenade grabs are less
-  likely during weapon transfers, and small props sit closer to the hand.
-- Jump requires a more deliberate upward stick push. After stick-crouching,
-  return the stick to center before jumping; no double tap is required.
-- Remote-charge detonators yield when either hand draws a firearm and return
-  to the dominant hand after release while a charge remains active, including
-  repeated grab/release cycles.
-- Improved ladder completion at safe landings and GPU capture polling. Some
-  reported performance stalls still need affected-player confirmation.
-- Menus gain a dark floor with teal-green glow and the pink cat credit,
-  **Made by thefreemike**. The floor and credit hide during level loading to
-  prevent flicker.
-- Includes all v0.1.2 gameplay, subtitles, calibration and comfort improvements.
-
-Version 1.0.0 was a tester release. This update brings its unified setup and the
-subsequent accepted fixes together for GOG and Steam players.
-
-Quit F.E.A.R., extract the complete **fear-vr-v1.1.1.zip** into a fresh folder,
-keep **setup-files** beside **F.E.A.R. VR Setup.exe**, and select your game folder.
-Then start **F.E.A.R. VR.exe** in that installation. Steam users must be signed
-into the owning account; leave the VR launcher open during startup.
+Quit F.E.A.R., extract the complete **fear-vr-v1.2.0.zip** into a fresh folder,
+keep **setup-files** beside **F.E.A.R. VR Setup.exe**, and choose **Upgrade**.
+No uninstall is needed first. Saves and profiles are preserved. Start
+**F.E.A.R. VR.exe**, choose your display mode, and select **Play in VR**.
+Steam users must be signed into the owning account.
 
 GOG remains recommended because Steam level loads can take several minutes.
-Use a clean game installation without other loaders. Expansions, multiplayer,
-Meta Quest Link/Air Link and Linux/Proton remain unsupported. The specific
-reported Blindside tunnel still lacks headset verification.
+Minimized OBS recording and every display-mode/runtime combination have not
+been verified. Recurring performance stalls on affected players' systems and
+the reported Blindside tunnel remain unresolved or unverified. Expansions,
+multiplayer, Meta Quest Link/Air Link and Linux/Proton remain unsupported.
 
 See [Installation](INSTALLATION.md), [Controls](CONTROLS.md),
 [Calibration](CALIBRATION.md), [Troubleshooting](TROUBLESHOOTING.md) and

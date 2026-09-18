@@ -76,6 +76,17 @@ Long captions scroll within the panel.
 
 ## Reloading and interactions
 
+For ASP and G2A2, a tactical magazine change with a round still chambered does
+not need another bolt pull. Empty reloads still need racking. Keep the ASP scope
+close to your selected eye to acquire the view; it remains usable while tilting.
+
+For the shotgun, reach toward the ammo pouch to reveal a shell and use Grip to
+pick it up, without pressing Reload. This also works when passive holster models
+are hidden. The shell hides when the tube is full. Load at the underside opening.
+
+To put a grenade back, release it near its calibrated holster. The return region
+is more forgiving than the grab region; move away from the holster to throw.
+
 After throwing a remote charge, its detonator returns to your dominant hand
 while a charge is active. You can still draw a firearm with that hand: the
 detonator hides while the firearm is held and returns when you release it.

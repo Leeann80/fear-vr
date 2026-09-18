@@ -17,13 +17,13 @@ your normal save backups. This release covers the original single-player campaig
 ## Download and verify
 
 1. Open [GitHub Releases](https://github.com/thefreemike31/fear-vr/releases/latest).
-2. Expand **Assets** if needed. Download **fear-vr-v1.1.1.zip** and
-   **fear-vr-v1.1.1.zip.sha256**. Ignore GitHub's automatic Source code archives.
+2. Expand **Assets** if needed. Download **fear-vr-v1.2.0.zip** and
+   **fear-vr-v1.2.0.zip.sha256**. Ignore GitHub's automatic Source code archives.
 3. Open the `.sha256` file in Notepad. Its first 64 characters are the expected hash.
 4. In the folder containing the ZIP, open PowerShell and run:
 
    ```powershell
-   Get-FileHash -Algorithm SHA256 -LiteralPath '.\fear-vr-v1.1.1.zip'
+   Get-FileHash -Algorithm SHA256 -LiteralPath '.\fear-vr-v1.2.0.zip'
    ```
 
 5. Compare all 64 characters. Letter case does not matter. A mismatch means
@@ -97,6 +97,14 @@ Meta Quest Link and Air Link are unsupported, including through SteamVR.
 Use **F.E.A.R. VR.exe**, not **FEAR.exe** or an existing store shortcut that starts
 the flat game. You can make a desktop shortcut to the VR executable. Leave it
 beside the installed game; do not move the executable itself to the desktop.
+
+Choose **Fullscreen** (the first-run default) or **Windowed**, with **1280 x 720**
+or **1920 x 1080** for windowed mode, then select **Play in VR**. Your choice is
+remembered across launches and editions; closing without playing does not save
+changes. These settings control the desktop mirror, not headset resolution.
+The game may also remember the desktop resolution in its normal display settings.
+**Controls** opens the player guide; **Open log folder** opens support logs.
+Leave the launcher running while playing in windowed mode.
 
 Wake both controllers before launch. In **Options > VR Settings**, review
 [movement and controls](CONTROLS.md), then [calibration](CALIBRATION.md).

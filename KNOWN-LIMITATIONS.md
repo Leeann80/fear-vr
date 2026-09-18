@@ -35,5 +35,10 @@
 - Releases are unsigned. Local download verification is not a guarantee that
   every antivirus or reputation service will accept the same archive.
 
+- The new launcher was owner-tested on GOG in windowed 720p with VirtualDesktopXR.
+  Separate Steam, fullscreen, 1080p and OBS/minimized capture coverage was not
+  reported. Do not assume recording continues while the mirror is minimized.
+- Small held props can still sit farther from the hand than ideal.
+
 Read the latest release notes and open issues before assuming an old workaround
 still applies. Development tools and the local Level Select menu are not shipped.
