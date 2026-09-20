@@ -76,6 +76,15 @@ Long captions scroll within the panel.
 
 ## Reloading and interactions
 
+At the post-loading continue prompt, release and press either trigger; you do
+not need to point at the panel. Holding a trigger through loading does not skip
+the prompt. Normal readiness delays still apply.
+
+The new **Slow Motion** tutorial card displays your mapped button once the
+ability is available and charged. Activate it normally to complete the lesson.
+Existing tutorial progress is preserved; the usual Tutorial Cards setting and
+reset action apply.
+
 For ASP and G2A2, a tactical magazine change with a round still chambered does
 not need another bolt pull. Empty reloads still need racking. Keep the ASP scope
 close to your selected eye to acquire the view; it remains usable while tilting.

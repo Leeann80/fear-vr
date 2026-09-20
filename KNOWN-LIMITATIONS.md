@@ -7,6 +7,14 @@
   are outside its supported scope.
 - Steam level loading can take several minutes. GOG remains recommended.
   Other mod loaders and hook suites are not validated together with this mod.
+- Steam memory preparation enables up to 4 GB of address space on 64-bit Windows;
+  it does not eliminate memory pressure or prove every out-of-memory report fixed.
+  Point of Entry passed owner tests with Virtual Desktop and SteamVR. An existing
+  native cleanup crash after selecting Quit remains unresolved.
+- Language preservation and Cyrillic menu-font fallback are experimental.
+  The automatic correction was owner-tested with Russian menus on GOG; other
+  languages, Steam automatic-font coverage, non-menu fonts and full campaigns
+  are not comprehensively verified. VR-specific text may remain English.
 - Steam's included input fix filters legacy gamepad/joystick enumeration;
   keyboard, mouse and OpenXR controllers remain available. This also applies
   to flat launches from that installation while the fix is enabled. See
@@ -35,9 +43,10 @@
 - Releases are unsigned. Local download verification is not a guarantee that
   every antivirus or reputation service will accept the same archive.
 
-- The new launcher was owner-tested on GOG in windowed 720p with VirtualDesktopXR.
-  Separate Steam, fullscreen, 1080p and OBS/minimized capture coverage was not
-  reported. Do not assume recording continues while the mirror is minimized.
+- Windowed mirror controls were tested on GOG at 720p with VirtualDesktopXR;
+  Steam memory startup was tested with Virtual Desktop and SteamVR. These tests
+  do not establish every display mode or OBS/minimized capture behavior.
+  Do not assume recording continues while the mirror is minimized.
 - Small held props can still sit farther from the hand than ideal.
 
 Read the latest release notes and open issues before assuming an old workaround

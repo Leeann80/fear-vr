@@ -1,4 +1,41 @@
-# Troubleshooting F.E.A.R. VR v1.2.0
+# Troubleshooting F.E.A.R. VR v1.3.0
+
+## Steam memory preparation
+
+The first normal Steam **Play in VR** prepares the verified original executable
+for up to 4 GB of address space on 64-bit Windows, then starts VR automatically.
+Allow that one-time process to finish. Keep **FEAR.exe.fearvr-memory-original**
+beside FEAR.exe; it is the original backup. No separate 4 GB patch or EchoPatch
+installation is required. GOG's executable stays unchanged.
+
+If preparation fails, preserve **FEARVR-Launcher.log** and the exact error.
+Do not replace FEAR.exe with a downloaded executable. To restore and opt out,
+close the game and create a Windows shortcut to **F.E.A.R. VR.exe**; in its
+Properties, append ** --restore-memory** after the closing quote in Target,
+then run that shortcut. It restores the supported prepared executable from the
+verified backup and creates **fearvr-memory-disabled.flag**. Remove that flag
+only if you want normal startup to prepare the executable again.
+
+The v1.3 uninstaller also restores the original when its verified backup exists.
+If you want to downgrade, uninstall v1.3 with its own uninstaller first, then
+install the older package. Steam Verify Files can restore the original; normal
+VR startup will prepare it again unless the disabled flag is present.
+
+Point of Entry passed owner tests on Virtual Desktop and SteamVR, but this is
+not a universal memory fix. Keep render resolution reasonable and report the
+level, settings and repeat rate for remaining failures. The game stays 32-bit.
+A known native cleanup crash after choosing Quit predates this change and is
+still unresolved; report it separately from an in-game crash or loading failure.
+
+## Experimental language support
+
+Use official language data already installed with a supported GOG/Steam game.
+The mod preserves those archives and applies a readable fallback to Cyrillic
+menu text requesting the original menu font. It does not translate VR-specific
+text, select a Windows language, or ship language archives/fonts. Russian menus
+on GOG were tested with the automatic correction; other paths remain experimental.
+For unreadable text, report the language, edition and exact screen. Do not copy
+loose test databases, foreign executables or old developer language fixtures.
 
 Support here covers **F.E.A.R. VR by TheFreeMike**, downloaded from
 [thefreemike31/fear-vr](https://github.com/thefreemike31/fear-vr/releases).
@@ -15,11 +52,11 @@ at a time, and save logs from the failing attempt before relaunching.
 ## GOG: Setup says another mod loader is present: dinput8.dll
 
 The v1.1.0 installer and launcher incorrectly rejected GOG's original Input
-wrapper. Use **v1.2.0 or later**; the verified original GOG file is allowed and
+wrapper. Use **v1.3.0 or later**; the verified original GOG file is allowed and
 preserved. Its presence does not mean you installed another mod.
 
 If you moved your original file to bypass that warning, close F.E.A.R., restore
-that same `dinput8.dll` to the GOG game folder and install v1.2.0. If it is lost,
+that same `dinput8.dll` to the GOG game folder and install v1.3.0. If it is lost,
 repair the game through GOG, then reinstall the VR mod. Do not substitute a DLL
 from a download site or the Steam edition. Unknown or modified loaders still
 need their own uninstall instructions or a clean supported installation.
@@ -419,4 +456,3 @@ Do not copy this DLL to GOG or replace it with another input wrapper. Setup and
 the launcher accept only this release's verified Steam input fix; other loader
 conflicts still require a clean installation. Uninstall restores the original
 files or removes the input DLL when Setup created it.
-

@@ -17,13 +17,13 @@ your normal save backups. This release covers the original single-player campaig
 ## Download and verify
 
 1. Open [GitHub Releases](https://github.com/thefreemike31/fear-vr/releases/latest).
-2. Expand **Assets** if needed. Download **fear-vr-v1.2.0.zip** and
-   **fear-vr-v1.2.0.zip.sha256**. Ignore GitHub's automatic Source code archives.
+2. Expand **Assets** if needed. Download **fear-vr-v1.3.0.zip** and
+   **fear-vr-v1.3.0.zip.sha256**. Ignore GitHub's automatic Source code archives.
 3. Open the `.sha256` file in Notepad. Its first 64 characters are the expected hash.
 4. In the folder containing the ZIP, open PowerShell and run:
 
    ```powershell
-   Get-FileHash -Algorithm SHA256 -LiteralPath '.\fear-vr-v1.2.0.zip'
+   Get-FileHash -Algorithm SHA256 -LiteralPath '.\fear-vr-v1.3.0.zip'
    ```
 
 5. Compare all 64 characters. Letter case does not matter. A mismatch means
@@ -137,6 +137,14 @@ overwrite files. Follow [Setup recovery troubleshooting](TROUBLESHOOTING.md#setu
 
 ## Steam installation and startup
 
+On the first normal Steam VR start, the launcher prepares the verified original
+executable for up to 4 GB of address space on 64-bit Windows, then continues into
+VR automatically. Press **Play in VR** once and let it finish. Keep
+**FEAR.exe.fearvr-memory-original**, the original backup beside FEAR.exe.
+GOG already supports the larger address space; its executable is unchanged.
+See [memory recovery](TROUBLESHOOTING.md#steam-memory-preparation) for opt-out
+and restoration. Do not apply a separate 4 GB patch or combine executable mods.
+
 If Setup detects multiple copies, select the Steam base-game folder you intend
 to test. Keep the original store executable. Sign into Steam with the owning
 account, then use **F.E.A.R. VR.exe** in that folder. Do not close the launcher
@@ -149,3 +157,15 @@ Disable other mods using their own instructions, or use a clean installation.
 Store file verification may leave additional mod DLLs behind. GOG and Steam use
 the same public Documents save/profile location; keep your existing save backups.
 Setup does not start the game and uninstall retains saves and profiles.
+
+## Experimental installed languages
+
+The mod preserves official language archives already installed with a supported
+GOG or Steam base game. Select/install your language through your game provider
+before installing the mod, where that language is available. The mod does not
+choose a language from Windows settings or include translation files.
+Cyrillic menu text uses an automatic readable font fallback; the runtime fix was
+tested with Russian menus on GOG. Other languages, Steam automatic-font coverage,
+non-menu fonts and full campaigns remain experimental. VR-specific text may
+remain English. A different retail executable is not supported merely because
+its language is different.

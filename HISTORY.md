@@ -4,12 +4,22 @@ The first public release arrived on **September 11, 2026**, after weeks of
 prototype development, headset testing, private betas, and player feedback.
 The earliest retained development checkpoint is **July 21, 2026**: a working
 VR prototype already existed at that point. This timeline covers the recorded
-work from that checkpoint through the v1.2 release, rather than claiming an
+work from that checkpoint through the v1.3 release, rather than claiming an
 exact date for the project's first experiment.
 
 This is a summary of TheFreeMike's project. It is separate from the
 [DR-89/fear-vr project](https://github.com/DR-89/fear-vr); this repository's
 support covers releases published by TheFreeMike here.
+
+## September 20, 2026 - v1.3 memory and language support
+
+Steam startup now prepares the verified original executable for up to 4 GB of
+address space, keeps an original backup and continues into VR automatically.
+Point of Entry passed owner tests with Virtual Desktop and SteamVR; the existing
+Quit cleanup crash remains unresolved. Experimental language preservation adds
+automatic Cyrillic menu-font fallback, tested with Russian menus on GOG.
+Either trigger can acknowledge the postload prompt without pointing at it, and
+a new mapped-button slow-motion tutorial preserves existing lesson progress.
 
 ## September 18, 2026 - v1.2 launcher and weapon polish
 
