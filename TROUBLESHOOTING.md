@@ -47,6 +47,7 @@ fix has not been confirmed for that report.
 | Defender blocks the mod, or Setup says a file is missing | [Allow the official mod](#download-or-antivirus-problem) |
 | Install/upgrade/recovery error | [Setup](#setup-stops-or-recovery-fails) |
 | Launcher error or monitor-only game | [Startup](#launcher-error-or-game-only-on-the-monitor) |
+| SteamVR: headset audio, picture only on monitor | [VIVE OpenXR layers](#steamvr-audio-in-the-headset-game-only-on-the-monitor-vive-layers) |
 | Always starts flat despite correct VR setup | [ReShade OpenXR conflict](#always-starts-flat-reshade-openxr-conflict) |
 | Black, frozen, boxed, or distorted image | [Headset image](#black-frozen-boxed-or-distorted-headset-view) |
 | Missing controller input or pause | [Controllers](#controllers-menus-or-pause) |
@@ -144,6 +145,36 @@ Normal and administrator launcher startup are supported with the matching
 bridge. An error requesting a matching bridge means reinstall/upgrade the
 complete package; mixing older DLLs will not repair it. Meta Link and Air Link
 remain unsupported even if SteamVR is running.
+
+### SteamVR: audio in the headset, game only on the monitor (VIVE layers)
+
+A Valve Index player confirmed that disabling conflicting VIVE OpenXR API
+layers restored VR. The game had appeared on the monitor with audio in the
+headset, but OpenXR initialization failed before headset detection. This was
+a software-layer conflict on that PC, not evidence that the Index cannot work.
+It does not establish official Index validation or explain every monitor-only launch.
+
+**Try this if VIVE layers are installed:**
+
+1. Close F.E.A.R. and preserve **FEARVR-Launcher.log** and **FEARVR-Startup.log**
+   from the failed attempt.
+2. Open **SteamVR Settings > OpenXR > Manage OpenXR API Layers**.
+3. Note their current settings, then temporarily disable **VIVE hand tracking**,
+   **VIVE facial tracking**, and **VIVE SRWorks**, if listed.
+4. Restart SteamVR, then launch **F.E.A.R. VR.exe** again.
+
+These layer settings can affect other OpenXR applications too. Restore the
+previous settings if the test does not help, or when another application needs
+those features. If the entries are absent or VR still fails, report that and
+share the new logs with personal paths removed. Do not delete DLLs or registry
+keys to follow this fix.
+
+For reference, the affected player's launcher selected SteamVR's Win32 runtime
+and loaded the VR bridge, but reported the three VIVE layer DLLs as
+`missing or not Win32`. The startup log stopped at `xrCreateInstance` with
+error `-32` (`XR_ERROR_FILE_ACCESS_ERROR`). That error alone does not identify
+the offending file; the successful retry after disabling the layers confirmed
+the workaround for this player. ReShade was already bypassed in that run.
 
 ### Always starts flat: ReShade OpenXR conflict
 
@@ -388,3 +419,4 @@ Do not copy this DLL to GOG or replace it with another input wrapper. Setup and
 the launcher accept only this release's verified Steam input fix; other loader
 conflicts still require a clean installation. Uninstall restores the original
 files or removes the input DLL when Setup created it.
+
