@@ -1,4 +1,12 @@
-# Troubleshooting F.E.A.R. VR v1.3.0
+# Troubleshooting F.E.A.R. VR v1.3.1
+
+## Stuck at Press any key to continue
+
+Update v1.3.0 to **v1.3.1** using Setup > Upgrade. This fixes the missing
+pointer, laggy headset view and unresponsive controllers at the loading prompt.
+Release and press either trigger to continue. Until updated, a keyboard key
+can pass the prompt.
+
 
 ## Steam memory preparation
 
@@ -52,11 +60,11 @@ at a time, and save logs from the failing attempt before relaunching.
 ## GOG: Setup says another mod loader is present: dinput8.dll
 
 The v1.1.0 installer and launcher incorrectly rejected GOG's original Input
-wrapper. Use **v1.3.0 or later**; the verified original GOG file is allowed and
+wrapper. Use **v1.3.1 or later**; the verified original GOG file is allowed and
 preserved. Its presence does not mean you installed another mod.
 
 If you moved your original file to bypass that warning, close F.E.A.R., restore
-that same `dinput8.dll` to the GOG game folder and install v1.3.0. If it is lost,
+that same `dinput8.dll` to the GOG game folder and install v1.3.1. If it is lost,
 repair the game through GOG, then reinstall the VR mod. Do not substitute a DLL
 from a download site or the Steam edition. Unknown or modified loaders still
 need their own uninstall instructions or a clean supported installation.

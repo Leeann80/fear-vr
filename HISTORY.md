@@ -4,12 +4,19 @@ The first public release arrived on **September 11, 2026**, after weeks of
 prototype development, headset testing, private betas, and player feedback.
 The earliest retained development checkpoint is **July 21, 2026**: a working
 VR prototype already existed at that point. This timeline covers the recorded
-work from that checkpoint through the v1.3 release, rather than claiming an
+work from that checkpoint through the v1.3.1 release, rather than claiming an
 exact date for the project's first experiment.
 
 This is a summary of TheFreeMike's project. It is separate from the
 [DR-89/fear-vr project](https://github.com/DR-89/fear-vr); this repository's
 support covers releases published by TheFreeMike here.
+
+## September 21, 2026 - v1.3.1 loading-screen hotfix
+
+Restores VR frame and controller updates at the post-load continue prompt,
+fixing the v1.3.0 regression that could leave a laggy headset view, missing
+pointer and unresponsive triggers. The owner confirmed the correction works.
+Upgrade v1.3.0 using native Setup; saves and profiles are preserved.
 
 ## September 20, 2026 - v1.3 memory and language support
 
